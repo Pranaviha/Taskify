@@ -1,0 +1,37 @@
+import React from 'react'
+
+export default function TaskList({tasks, updateTask, deleteTask}) {
+    const toggleComplete = (index) => {
+        const updatedTask = {...tasks[index], completed: !tasks[index].completed};
+        updateTask(updatedTask, index)
+    }
+  return (
+   <ul className='task-list'>
+    {tasks.map((task, index) => (
+        <li 
+          key={index} 
+          className={task.completed ? "completed" : ""}
+          draggable
+          onDragStart={(e) => {
+            e.dataTransfer.setData("taskIndex", index);
+          }}
+          style={{ cursor: 'grab' }}
+          title={task.date ? `Scheduled for ${task.date}` : "Unscheduled. Drag to calendar."}
+        >
+            <div>
+                <span>{task.text}
+                    {task.date && <small style={{marginTop: "4px", backgroundColor: "rgba(79, 172, 254, 0.4)"}}>🗓 {task.date}</small>}
+                    <small>({task.priority}, {task.category})</small>
+                </span>
+            </div>
+
+            <div>
+                <button onClick={()=>toggleComplete(index)}>
+                    {task.completed ? "Undo" : "Complete"}</button>
+                <button onClick={()=>deleteTask(index)}>Delete</button>
+            </div>
+        </li>
+    ))}
+   </ul>
+  )
+}
