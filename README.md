@@ -1,16 +1,60 @@
-# React + Vite
+# 📌 Taskify – React Task Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Taskify is a **React-based task management application** designed to help users organize, track, and manage their daily tasks efficiently. It provides a clean UI, responsive design, and powerful features like task tracking, history, and a calendar view for date-based planning.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### ✅ Core Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Add, Delete & Complete Tasks**
 
-## Expanding the ESLint configuration
+  * Easily create tasks and mark them as completed.
+  * Delete tasks when no longer needed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Persistent Storage**
+
+  * Uses **localStorage** to save tasks.
+  * Data remains even after refreshing the page.
+
+* **Responsive Design**
+
+  * Works seamlessly across **desktop, tablet, and mobile devices**.
+
+* **Task Filtering & Validation**
+
+  * Prevents empty or duplicate task entries.
+  * Filter tasks based on status.
+
+---
+
+### 📊 Advanced Features
+
+* **Progress Tracker**
+
+  * Visual representation of task completion.
+  * Automatically updates as tasks are completed.
+
+* **Task History**
+
+  * View completed tasks history.
+  * Restore or permanently delete tasks.
+
+- **Calendar Integration**
+
+  * Plan and manage tasks based on **dates and months**.
+  * Organize workload visually using a calendar view.
+  * Helps in better scheduling and time management.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React.js
+* **Styling:** CSS
+* **State Management:** React Hooks
+* **Storage:** localStorage
+
+
+⭐ If you like this project, consider giving it a star on GitHub!
